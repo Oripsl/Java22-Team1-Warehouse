@@ -1,4 +1,4 @@
-public class classeDispositivi {
+public class ClasseDispositivi {
     public void setDevice(String device) {
         this.device = device;
     }
@@ -50,7 +50,7 @@ public class classeDispositivi {
     private int storage;
     private double purchase;
 
-    public classeDispositivi (String device, String brand, String model, String description, int display, int storage, double purchase) {
+    public ClasseDispositivi (String device, String brand, String model, String description, int display, int storage, double purchase) {
         this.device = device;
         this.brand = brand;
         this.model = model;
