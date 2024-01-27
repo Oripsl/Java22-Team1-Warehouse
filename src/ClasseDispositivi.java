@@ -32,10 +32,10 @@ public class ClasseDispositivi {
     public String getDescription() {
         return description;
     }
-    public int getDisplay() {
+    public double getDisplay() {
         return display;
     }
-    public int getStorage() {
+    public double getStorage() {
         return storage;
     }
     public double getPurchase() {
@@ -46,11 +46,11 @@ public class ClasseDispositivi {
     private String brand;
     private String model;
     private String description;
-    private int display;
-    private int storage;
+    private double display;
+    private double storage;
     private double purchase;
 
-    public ClasseDispositivi (String device, String brand, String model, String description, int display, int storage, double purchase) {
+    public ClasseDispositivi (String device, String brand, String model, String description, double display, double storage, double purchase) {
         this.device = device;
         this.brand = brand;
         this.model = model;
@@ -58,5 +58,18 @@ public class ClasseDispositivi {
         this.display = display;
         this.storage = storage;
         this.purchase = purchase;
+    }
+
+    @Override
+    public String toString() {
+        return "ClasseDispositivi {" +
+                " device = '" + device + '\'' +
+                ", brand = '" + brand + '\'' +
+                ", model = '" + model + '\'' +
+                ", description = '" + description + '\'' +
+                ", display = " + display +
+                ", storage = " + storage +
+                ", purchase = " + purchase +
+                '}';
     }
 }
