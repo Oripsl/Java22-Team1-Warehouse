@@ -50,7 +50,7 @@ public class ClasseDispositivi {
     private double storage;
     private double purchase;
 
-    public ClasseDispositivi (String device, String brand, String model, String description, double display, double storage, double purchase) {
+    public ClasseDispositivi (Magazzino magazzino, String device, String brand, String model, String description, double display, double storage, double purchase) {
         this.device = device;
         this.brand = brand;
         this.model = model;
@@ -58,18 +58,22 @@ public class ClasseDispositivi {
         this.display = display;
         this.storage = storage;
         this.purchase = purchase;
+
+        magazzino.aggiungi(this);
     }
+
+
 
     @Override
     public String toString() {
-        return "ClasseDispositivi {" +
-                " device = '" + device + '\'' +
+        return "" +
+                " dispositivo = '" + device + '\'' +
                 ", brand = '" + brand + '\'' +
-                ", model = '" + model + '\'' +
-                ", description = '" + description + '\'' +
+                ", modello = '" + model + '\'' +
+                ", descrizione = '" + description + '\'' +
                 ", display = " + display +
-                ", storage = " + storage +
-                ", purchase = " + purchase +
+                ", memoria = " + storage +
+                ", acquisto = " + purchase +
                 '}';
     }
 }

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public class Carrello {
     private ArrayList<ClasseDispositivi> dispositivi = new ArrayList<>();
 
@@ -8,12 +9,12 @@ public class Carrello {
     }
 
     // Aggiungere al carrello
-    public void aggiungiAlCarrello(ClasseDispositivi dispositivo) {
+    public void aggiungi(ClasseDispositivi dispositivo) {
         dispositivi.add(dispositivo);
     }
 
     // Rimuovere dispositivo per indice
-    public void rimuoviDispositivo(int index) {
+    public void rimuovi(int index) {
         if(index >=0 && index < dispositivi.size()) {
             dispositivi.remove(index);
         } else {
@@ -22,7 +23,7 @@ public class Carrello {
     }
 
     // Stampare elementi nel carrello
-    public void stampaCarrello() {
+    public void stampa() {
         for(int i = 0; i < dispositivi.size(); i++) {
             System.out.println(i + " : " + dispositivi.get(i));
         }
@@ -30,7 +31,7 @@ public class Carrello {
 
     // Calcolare prezzo finale
     public double getPrezzoFinale() {
-        int prezzoFinale = 0;
+        double prezzoFinale = 0;
         for(ClasseDispositivi dispositivo : dispositivi) {
             prezzoFinale += dispositivo.getPurchase();
         }
@@ -38,7 +39,7 @@ public class Carrello {
     }
 
     // Selezionare specifico elemento per indice
-    public ClasseDispositivi getDispositivi(int indice) {
+    public ClasseDispositivi getDispositivo(int indice) {
         if(indice >= 0 && indice < dispositivi.size()) {
             return dispositivi.get(indice);
         } else {
@@ -48,7 +49,7 @@ public class Carrello {
     }
 
     // Svuota carrello
-    public void svuotaCarrello() {
+    public void svuota() {
         dispositivi.clear();
     }
 }
